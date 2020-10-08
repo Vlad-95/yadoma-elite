@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Я дома</title>
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="quiz">
+        <div class="quiz__wrap" style="background-image: url(img/bg-district.jpg);">
+            <div class="quiz__content">
+                
+                <header class="quiz__header">
+                    <a href="javascript:;" class="quiz__header__logo">
+                        <svg width="110" height="35">
+                            <use xlink:href="img/icons/sprite.svg#header-logo"></use>
+                        </svg>
+                    </a>
+                </header>
+
+                <form action="send.php" method="POST" class="quiz__form">
+
+                    <!-- -----------Выберите район----------- -->
+
+                    <div class="quiz__form-step quiz__form-step--active" data-name="district">
+                        <h2 class="quiz__form-step-title">В каком районе вы бы хотели жить?</h2>
+                        
+
+                        <div class="quiz__form-step-content">
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_area[1]" value="Крестовский остров" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Крестовский остров</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_area[2]" value="Петроградский район" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Петроградский район</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_area[3]" value="Центральный" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Центральный</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_area[4]" value="Васильевский" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Васильевский</div>
+                                </label>
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_area[5]" value="Московский" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Московский</div>
+                                </label>                         
+
+                            
+                        </div>
+                    </div>
+                    <!-- ------------------------- -->
+
+
+                    <!-- -------------Срок сдачи------------- -->
+                    <div class="quiz__form-step" data-name="period">
+                        <h2 class="quiz__form-step-title">Срок сдачи:</h2>
+
+                        <div class="quiz__form-step-content">
+                            
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_finish_status[1]" value="Сданный объект" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Сданный объект</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_finish_status[2]" value="Строящееся жилье" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Строящееся жилье</div>
+                                </label>
+
+                            
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+
+
+                    <!-- ------------Количество комнат-------------- -->
+                    <div class="quiz__form-step" data-name="rooms">
+                        <h2 class="quiz__form-step-title">Количество комнат:</h2>
+
+                        <div class="quiz__form-step-content">
+                            
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_apartment_sizes[1]" value="1" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">1</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_apartment_sizes[2]" value="2" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">2</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_apartment_sizes[3]" value="3" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">3</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_apartment_sizes[4]" value="4+" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">4+</div>
+                                </label>
+
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+
+
+                    <!-- -------------Площадь кв------------- -->
+                    <div class="quiz__form-step" data-name="square">
+                        <h2 class="quiz__form-step-title">Желаемая площадь квартиры:</h2>
+
+                        <div class="quiz__form-step-content">
+                            
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_apartment_square[1]" value="50-80" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">50-80</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_apartment_square[2]" value="80-120" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">80-120</div>
+                                </label>
+
+                            
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_apartment_square[3]" value="120-180" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">120-180</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_apartment_square[4]" value="Более 250" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">Более 250</div>
+                                </label>
+                        
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+
+
+                    <!-- ------------Бюджет-------------- -->
+                    <div class="quiz__form-step" data-name="budget">
+                        <h2 class="quiz__form-step-title">Планируемый бюджет:</h2>
+            
+
+                        <div class="quiz__form-step-content">
+                            
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_prices[1]" value="До 15 млн" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">До 15 млн</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_prices[2]" value="До 30 млн" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">До 30 млн</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_prices[3]" value="До 50 млн" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">До 50 млн</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_prices[4]" value="До 80 млн" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">До 80 млн</div>
+                                </label>
+
+                                <label class="quiz__form-label">
+                                    <input type="checkbox" name="desired_prices[5]" value="100+ млн" class="quiz__form-checkbox">
+                                    <div class="quiz__form-checkbox-text">100+</div>
+                                </label>
+
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+
+                    <!-- -------------Особые пожелания------------- -->
+                    <div class="quiz__form-step" data-name="special">
+                        <h2 class="quiz__form-step-title">Особые пожелания</h2>
+
+                        <div class="quiz__form-step-content">
+                            <div class="quiz__form-step-content-col">
+                                <label class="quiz__form-label">
+                                    <textarea name="special_requests" id="" class="quiz__form-textarea"></textarea>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+
+                    <!-- -------------Вам доступны варианты------------- -->
+                    <div class="quiz__form-step quiz__form-step_offer" data-name="offer">
+                        <h2 class="quiz__form-step-title">Вам подходит:</h2>
+                        <h3 class="quiz__form-step-subtitle quiz__form-step-subtitle_offer">7 вариантов</h3>
+
+                        <a href="javascript:;" class="quiz__form-btn js-next">
+                            Получить варианты
+                        </a>
+
+                        <!-- слайдер на мобилке -->
+                        <div class="quiz__advantages quiz__advantages_mobile">
+                            <div class="quiz__advantages__row quiz__advantages__row_mobile">
+                                <div class="quiz__advantages__item  quiz__advantages__item_one">
+                                    <div class="quiz__advantages__item__number">
+                                        1
+                                    </div>
+                                    <div class="quiz__advantages__item__text">
+                                        Персональный подбор без привязки к застройщику 
+                                    </div>
+                                </div>
+                                <div class="quiz__advantages__item quiz__advantages__item_two">
+                                    <div class="quiz__advantages__item__number">
+                                        2
+                                    </div>
+                                    <div class="quiz__advantages__item__text">
+                                        Согласуем индивидуальную форму оплаты
+                                    </div>
+                                </div>
+            
+                                <div class="quiz__advantages__item quiz__advantages__item_three">
+                                    <div class="quiz__advantages__item__number">
+                                        3
+                                    </div>
+                                    <div class="quiz__advantages__item__text">
+                                        Встречаем: аэропорт/вокзал, организуем выезд на интересующие вас объекты
+                                    </div>
+                                </div>
+                                <div class="quiz__advantages__item quiz__advantages__item_four">
+                                    <div class="quiz__advantages__item__number">
+                                        4
+                                    </div>
+                                    <div class="quiz__advantages__item__text">
+                                        Юридическое сопровождение
+                                    </div>
+                                </div>
+                                <div class="quiz__advantages__item quiz__advantages__item_five">
+                                    <div class="quiz__advantages__item__number">
+                                        5
+                                    </div>
+                                    <div class="quiz__advantages__item__text">
+                                        От идеи до получении ключей все услуги сервиса Бесплатны
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!--  -->
+
+                    </div>
+                    <!-- -------------------------- -->
+
+                    <!-- -------------Способы связи------------- -->
+                    <div class="quiz__form-step quiz__form-step_callback" data-name="callback">
+                        <input type="hidden" name="communication_method">
+                        
+                        <label class="quiz__form-label">
+                            <span class="quiz__form-name">Как к вам можно обратиться:</span>
+                            <input type="text" name="name" class="quiz__form-input">
+                            
+                        </label>
+                        <label class="quiz__form-label">
+                            <span class="quiz__form-name">Номер телефона:</span>
+                            <input type="text" name="tel" required class="quiz__form-input quiz__form-input_phone"
+                                   pattern=".{15}">
+                            
+                        </label>
+
+                        <label class="quiz__form-label">
+                            <span class="quiz__form-name">Email:</span>
+                            <input type="text" name="email" class="quiz__form-input">
+                            
+                        </label>
+
+                        <button class="quiz__form-submit" type="submit"
+                                onclick="submit_with_communication_method('WhatsApp')">
+                            Получить по WhatsApp
+                        </button>
+
+                        <button class="quiz__form-submit" type="submit"
+                                onclick="submit_with_communication_method('Email')">
+                            Получить по Email
+                        </button>
+                        <span class="quiz__form-agree">Отправляя форму, Вы соглашаетесь на обработку персональных данных</span>
+                        
+                    </div>
+                    <!-- -------------------------- -->
+
+                    
+                </form>
+                <div class="quiz__footer">
+                    
+
+                    <div class="quiz__footer-btns">
+                        <a href="javascript:;" class="quiz__footer-prev js-prev">
+                            назад
+                        </a>
+                        <a href="javascript:;" class="quiz__footer-next js-next">
+                            далее
+                        </a>
+                    </div>
+                </div>
+
+                
+            </div>
+
+
+            <div class="quiz__advantages quiz__advantages_desktop">
+                <div class="quiz__advantages__item">
+                    <div class="quiz__advantages__item__number">
+                        <img src="img/intro-item1.png" alt="">
+                    </div>
+                    <div class="quiz__advantages__item__text">
+                        Персональный подбор без привязки к застройщику 
+                    </div>
+                </div>
+
+                <div class="quiz__advantages__item">
+                    <div class="quiz__advantages__item__number">
+                        <img src="img/intro-item2.png" alt="">
+                    </div>
+                    <div class="quiz__advantages__item__text">
+                        Согласуем индивидуальную форму оплаты
+                    </div>
+                </div>
+
+                <div class="quiz__advantages__item">
+                    <div class="quiz__advantages__item__number">
+                        <img src="img/intro-item3.png" alt="">
+                    </div>
+                    <div class="quiz__advantages__item__text">
+                        Встречаем: аэропорт/вокзал, организуем выезд на интересующие вас объекты
+                    </div>
+                </div>
+
+                <div class="quiz__advantages__item">
+                    <div class="quiz__advantages__item__number">
+                        <img src="img/intro-item4.png" alt="">
+                    </div>
+                    <div class="quiz__advantages__item__text">
+                        Юридическое сопровождение
+                    </div>
+                </div>
+
+                <div class="quiz__advantages__item">
+                    <div class="quiz__advantages__item__number">
+                        <img src="img/intro-item5.png" alt="">
+                    </div>
+                    <div class="quiz__advantages__item__text">
+                        От идеи до получении ключей все услуги сервиса Бесплатны
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="js/libs.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/form.js"></script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(66173677, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/66173677" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1524352171106095');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1524352171106095&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?168",t.onload=function(){VK.Retargeting.Init("VK-RTRG-514175-5c999"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-514175-5c999" style="position:fixed; left:-999px;" alt=""/></noscript>
+</body>
+</html>
